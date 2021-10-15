@@ -5,15 +5,21 @@ const path = require('path')
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    // width: 800,
+    // height: 600,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  // mainWindow.loadFile('index.html')
+  mainWindow.setMenu(null);
+  mainWindow.loadURL("https://podcasts.google.com")
+
+  // if(document.getElementsByClassName("gb_Nc") != []){
+  //   document.getElementsByClassName("gb_Nc")[0].remove();
+  // }
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
