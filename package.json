@@ -1,12 +1,14 @@
 {
-  "name": "electron-quick-start",
+  "name": "google-podcasts-electron",
+  "applicationId": "GooglePodcastsElectron",
+  "productName": "Google Podcasts",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A lightweight electron wrapper for the Google Podcasts web app",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/kyleshepard/podcasts-electron",
   "keywords": [
     "Electron",
     "quick",
@@ -14,7 +16,7 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
+  "author": "Kyle Shepard, Chad Ross",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^15.1.2"
