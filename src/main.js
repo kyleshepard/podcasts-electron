@@ -5,21 +5,19 @@ const path = require('path')
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    // width: 800,
-    // height: 600,
+    width: 900,
+    height: 600,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
   })
 
-  // and load the index.html of the app.
-  // mainWindow.loadFile('index.html')
-  mainWindow.setMenu(null);
+  // load webpage for app
+  // mainWindow.setMenu(null);
   mainWindow.loadURL("https://podcasts.google.com")
 
-  // if(document.getElementsByClassName("gb_Nc") != []){
-  //   document.getElementsByClassName("gb_Nc")[0].remove();
-  // }
+  console.log(process.version); //not same as installed version. dependent on electron version, which is best
+  console.log(__dirname)
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
@@ -34,6 +32,8 @@ app.whenReady().then(() => {
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
+  // BrowserWindow.getFocusedWindow().webContents.executeJavaScript("if(document.getElementsByClassName('gb_Nc') != []){document.getElementsByClassName('gb_Nc')[0].remove();}").then(console.log("success"))
+
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
 })
