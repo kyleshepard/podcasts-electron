@@ -4,7 +4,7 @@
   "productName": "Google Podcasts",
   "version": "1.0.0",
   "description": "A lightweight electron wrapper for the Google Podcasts web app",
-  "main": "main.js",
+  "main": "./src/main.js",
   "scripts": {
     "start": "electron ."
   },
