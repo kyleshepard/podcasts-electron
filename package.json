@@ -19,6 +19,6 @@
   "author": "Kyle Shepard, Chad Ross",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^18.1.0"
+    "electron": "^19.0.0"
   }
 }
